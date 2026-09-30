@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MELT//LAB — Crafted With Malaysian Soul</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{
+ --ink:#211914;--cream:#f4eee5;--ivory:#fbf8f2;--taupe:#cdb9a3;--gold:#b28a55;
+ --line:#ded1c2;--green:#66705d;--muted:#766960;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:0 30px}
+.top{background:var(--ink);color:#f8f0e6;text-align:center;font-size:11px;letter-spacing:.16em;padding:10px;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:50;background:rgba(244,238,229,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(222,209,194,.8)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:700;letter-spacing:.12em;font-size:20px}
+.logo i{font-style:normal;color:var(--gold)}.links{display:flex;gap:30px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+.navright{display:flex;gap:10px;align-items:center}.bag{border:1px solid var(--ink);border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:13px}
+.btn{border:1px solid var(--ink);border-radius:2px;padding:13px 20px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:inline-block}
+.btn.dark{background:var(--ink);color:var(--ivory)}.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.hero{min-height:calc(100vh - 120px);display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.heroCopy{display:flex;flex-direction:column;justify-content:center;padding:80px 70px 80px 0}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.25em;color:var(--gold);font-weight:700}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600}
+h1{font-size:clamp(58px,7vw,96px);line-height:.88;letter-spacing:-.055em;margin:22px 0}
+.heroCopy p{max-width:520px;color:var(--muted);font-size:16px;line-height:1.8}
+.actions{display:flex;gap:10px;margin-top:25px}.micro{margin-top:25px;font-size:11px;color:#8b7c70;letter-spacing:.08em}
+.heroVisual{min-height:650px;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 50% 35%,#e6d0ae 0 13%,transparent 13.5%),
+ radial-gradient(circle at 50% 35%,#a66d47 0 20%,transparent 20.5%),
+ radial-gradient(circle at 50% 35%,#5b3a2d 0 28%,transparent 28.5%),
+ linear-gradient(145deg,#d6c3ac,#786352 65%,#31251f)}
+.heroVisual:after{content:"";position:absolute;inset:8%;border:1px solid rgba(255,255,255,.3)}
+.heroLabel{position:absolute;left:32px;bottom:28px;color:white;z-index:2}.heroLabel small{letter-spacing:.2em;font-size:10px;text-transform:uppercase}.heroLabel h2{font-size:34px;margin:7px 0}.heroLabel span{font-size:12px;opacity:.8}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0}.trustrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#77685e}
+section{padding:100px 0}.sectionIntro{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}
+.eyebrow{font-size:10px;letter-spacing:.23em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h2{font-size:50px;line-height:1;margin:9px 0}.sectionIntro p{max-width:430px;color:var(--muted);line-height:1.7;font-size:14px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.product{background:var(--ivory);border:1px solid var(--line);transition:.25s;position:relative}.product:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(33,25,20,.09)}
+.photo{height:285px;position:relative;overflow:hidden;background:linear-gradient(135deg,#d9c3a4,#78503b)}
+.photo:before{content:"";position:absolute;width:125px;height:125px;border-radius:50%;background:#f5ead7;left:calc(50% - 62px);top:75px;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.photo:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;background:#9a6847;left:calc(50% - 40px);top:97px;box-shadow:inset 0 0 0 13px #d3a87b}
+.p2{background:linear-gradient(135deg,#8b9a7a,#e8ddc7)}.p2:after{background:#72836b}.p3{background:linear-gradient(135deg,#3b2922,#bd8b62)}.p3:after{background:#4b3025}.p4{background:linear-gradient(135deg,#d6b38a,#f2e1c5)}.p4:after{background:#b97d55}
+.badge{position:absolute;top:14px;left:14px;background:var(--ivory);padding:7px 9px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;z-index:2}
+.info{padding:18px}.info .type{font-size:9px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase}.info h3{font-size:21px;margin:7px 0}.info p{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 15px}.row{display:flex;justify-content:space-between;align-items:center}.price{font-weight:700;font-size:13px}.add{width:31px;height:31px;border:1px solid var(--ink);display:grid;place-items:center;font-size:18px}
+.story{background:var(--ink);color:#f6eee4}.storygrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.story h2{font-size:58px}.story p{color:#c6b8aa;line-height:1.9;font-size:15px}.ingredients{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #5c4b40;margin-top:30px}.ingredient{padding:17px 0;border-bottom:1px solid #5c4b40;font-size:11px;letter-spacing:.08em}.ingredient span{float:right;color:#aa947d}
+.quote{background:var(--ivory);border:1px solid var(--line);padding:45px}.quotegrid{display:grid;grid-template-columns:1fr .75fr;gap:50px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0}.step{border:1px solid var(--line);padding:18px}.step b{font-size:11px}.step p{font-size:11px;color:var(--muted);line-height:1.5}
+select,input{width:100%;padding:13px;border:1px solid var(--line);background:white;font:inherit;margin-top:7px}label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:block;margin-top:14px}
+.totalbox{background:var(--ink);color:white;padding:28px}.totalbox small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#c8b59e}.total{font-family:"Playfair Display";font-size:48px;margin:8px 0}.totalbox p{color:#bcae9f;font-size:11px;line-height:1.6}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review{background:var(--ivory);border:1px solid var(--line);padding:30px}.stars{color:var(--gold);letter-spacing:4px}.review p{font-family:"Playfair Display";font-size:20px;line-height:1.5}.review small{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.final{background:#dfd2c3;text-align:center;padding:110px 20px}.final h2{font-size:65px;max-width:700px;margin:15px auto 25px}.final p{max-width:520px;margin:auto auto 30px;color:#67594f;line-height:1.7}
+footer{padding:55px 0;background:var(--ink);color:#eee3d7}.foot{display:flex;justify-content:space-between;gap:30px}.foot small{color:#a99b8e}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.heroCopy{padding:70px 0}.heroVisual{min-height:500px}.products{grid-template-columns:1fr 1fr}.storygrid,.quotegrid{grid-template-columns:1fr}.links{display:none}}
+@media(max-width:600px){.wrap{padding:0 18px}.products,.testimonials{grid-template-columns:1fr}.steps{grid-template-columns:1fr}section{padding:70px 0}h2,.story h2{font-size:40px}.final h2{font-size:44px}.navright .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="top">Complimentary consultation for selected dessert-table bookings · Klang Valley</div>
+<nav><div class="wrap nav">
+<a class="logo" href="#">MELT<i>//</i>LAB.</a>
+<div class="links"><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#table">Dessert Tables</a><a href="#reviews">Reviews</a></div>
+<div class="navright"><a class="btn" href="#table">Start an Enquiry</a><div class="bag">0</div></div>
+</div></nav>
+
+<main>
+<section class="wrap hero">
+<div class="heroCopy">
+<div class="kicker">Modern Malaysian Dessert Studio</div>
+<h1>Made to be<br><em>remembered.</em></h1>
+<p>Beautiful little desserts inspired by the flavours we grew up with — refined, handcrafted and styled for celebrations that deserve more than an ordinary cake table.</p>
+<div class="actions"><a class="btn dark" href="#shop">Shop Signature</a><a class="btn" href="#table">Build My Dessert Table</a></div>
+<div class="micro">Small-batch · Made to order · Crafted in Malaysia</div>
+</div>
+<div class="heroVisual"><div class="heroLabel"><small>Signature 01</small><h2>Pandan · Gula Melaka</h2><span>A familiar flavour, dressed differently.</span></div></div>
+</section>
+
+<div class="trust"><div class="wrap trustrow"><span>01 — Handmade in small batches</span><span>02 — Malaysian-inspired flavours</span><span>03 — Event-ready presentation</span><span>04 — Custom orders available</span></div></div>
+
+<section id="shop"><div class="wrap">
+<div class="sectionIntro"><div><div class="eyebrow">The signature collection</div><h2>Small bites.<br>Big memory.</h2></div><p>Start with our most-loved flavours. Each piece is designed to look beautiful on the table and taste familiar from the first bite.</p></div>
+<div class="products">
+<div class="product"><div class="photo"><span class="badge">Best seller</span></div><div class="info"><span class="type">Tart · 1 piece</span><h3>Pandan Gula Melaka</h3><p>Silky pandan cream, toasted coconut and gula Melaka caramel.</p><div class="row"><span class="price">RM4.50 / pc</span><span class="add">+</span></div></div></div>
+<div class="product"><div class="photo p2"><span class="badge">Local favourite</span></div><div class="info"><span class="type">Petite kuih</span><h3>Matcha Seri Muka</h3><p>Japanese matcha meets the soft coconut-rice classic.</p><div class="row"><span class="price">RM4.00 / pc</span><span class="add">+</span></div></div></div>
+<div class="product"><div class="photo p3"><span class="badge">Signature</span></div><div class="info"><span class="type">Choux</span><h3>Chocolate Dodol</h3><p>Dark chocolate choux with a chewy gula Melaka centre.</p><div class="row"><span class="price">RM5.00 / pc</span><span class="add">+</span></div></div></div>
+<div class="product"><div class="photo p4"><span class="badge">New</span></div><div class="info"><span class="type">Cheesecake</span><h3>Burnt Coconut</h3><p>Caramelised coconut, vanilla cream and a delicate sea-salt finish.</p><div class="row"><span class="price">RM7.50 / pc</span><span class="add">+</span></div></div></div>
+</div></div></section>
+
+<section class="story" id="story"><div class="wrap storygrid">
+<div><div class="eyebrow">Why MELT//LAB?</div><h2>Our nostalgia.<br>Your celebration.</h2></div>
+<div><p>We believe Malaysian flavours already have everything they need to be extraordinary. MELT//LAB simply gives them a new setting — cleaner, more considered and made for the modern table.</p><p>Think pandan after rain, warm gula Melaka, toasted coconut, black sesame and the little flavours that make a place feel like home.</p>
+<div class="ingredients"><div class="ingredient">Pandan <span>local favourite</span></div><div class="ingredient">Gula Melaka <span>deep caramel</span></div><div class="ingredient">Coconut <span>toasted</span></div><div class="ingredient">Black Sesame <span>nutty finish</span></div></div></div>
+</div></section>
+
+<section id="table"><div class="wrap">
+<div class="sectionIntro"><div><div class="eyebrow">Made for your occasion</div><h2>Build your<br>dessert table.</h2></div><p>Tell us your guest count and preferred experience. Get a starting estimate in seconds, then let our team tailor the details.</p></div>
+<div class="quote"><div class="quotegrid"><div>
+<div class="steps"><div class="step"><b>01 · GUESTS</b><p>Choose your celebration size.</p></div><div class="step"><b>02 · EXPERIENCE</b><p>Select the level of styling.</p></div><div class="step"><b>03 · ENQUIRE</b><p>We refine your final quote.</p></div></div>
+<label>Event type<select id="event"><option>Wedding</option><option>Engagement</option><option>Birthday</option><option>Corporate</option><option>Private celebration</option></select></label>
+<label>Guests<input id="guests" type="number" value="100" min="20" step="10"></label>
+<label>Experience<select id="pack"><option value="18">Essential — RM18 / guest</option><option value="28" selected>Signature — RM28 / guest</option><option value="42">Lab Experience — RM42 / guest</option></select></label>
+</div><div class="totalbox"><small>Your starting estimate</small><div class="total" id="total">RM2,800</div><p id="line">Signature experience · 100 guests</p><p>Includes a curated dessert assortment. Final pricing is confirmed after menu, venue, delivery and styling details are reviewed.</p><a class="btn gold" style="width:100%;text-align:center" href="https://wa.me/" onclick="alert('Connect this button to your WhatsApp number before launch.');return false;">Request My Quote</a></div></div></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+<div class="sectionIntro"><div><div class="eyebrow">The table after the table</div><h2>Loved for the<br>little details.</h2></div><p>Social proof is one of the strongest purchase signals. Replace these placeholders with real customer reviews, event photos and tagged Instagram content before launch.</p></div>
+<div class="testimonials">
+<div class="review"><div class="stars">★★★★★</div><p>“The dessert table looked like it belonged in a magazine — and every flavour still felt so familiar.”</p><small>Wedding · Kuala Lumpur</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“The pandan gula Melaka tart disappeared before we even got to the cake.”</p><small>Private event · Selangor</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Beautiful, thoughtful and very Malaysian without feeling traditional in the usual way.”</p><small>Brand event · Petaling Jaya</small></div>
+</div></div></section>
+
+<section class="final"><div class="wrap"><div class="eyebrow">Your next celebration</div><h2>Make the dessert<br>the conversation.</h2><p>For intimate dinners, weddings, birthdays and brand moments — let MELT//LAB build a table people remember.</p><a class="btn dark" href="#table">Start Your Enquiry</a></div></section>
+</main>
+
+<footer><div class="wrap foot"><div><div class="logo">MELT<i>//</i>LAB.</div><small>Crafted With Malaysian Soul.</small></div><small>© 2026 MELT//LAB · Dessert Studio · Malaysia</small></div></footer>
+
+<script>
+function calc(){let g=+document.getElementById('guests').value||0,p=+document.getElementById('pack').value||0;document.getElementById('total').textContent='RM'+(g*p).toLocaleString('en-MY');document.getElementById('line').textContent=document.getElementById('pack').selectedOptions[0].text.split('—')[0].trim()+' · '+g+' guests'}
+document.getElementById('guests').addEventListener('input',calc);document.getElementById('pack').addEventListener('input',calc);calc();
+</script>
+</body>
+</html>
