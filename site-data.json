@@ -1,0 +1,106 @@
+{
+  "brand": {
+    "tagline": "Crafted With Malaysian Soul.",
+    "hero": "Made to be remembered.",
+    "subhero": "Modern Malaysian desserts, reimagined for gifting, celebrations and everyday cravings.",
+    "whatsapp": "",
+    "instagram": "@melt.lab",
+    "location": "Klang Valley, Malaysia",
+    "minOrder": 20,
+    "leadTime": "2–3 days notice",
+    "deliveryNote": "Delivery / pickup details are confirmed on WhatsApp."
+  },
+  "products": [
+    {
+      "id": "pandan-tart",
+      "name": "Pandan Gula Melaka Tart",
+      "category": "Tart · 1 piece",
+      "price": 4.5,
+      "badge": "Best seller",
+      "desc": "Silky pandan cream, toasted coconut and gula Melaka caramel.",
+      "emoji": "🌿",
+      "available": true
+    },
+    {
+      "id": "matcha-serimuka",
+      "name": "Matcha Seri Muka",
+      "category": "Petite kuih",
+      "price": 4.0,
+      "badge": "Local favourite",
+      "desc": "Japanese matcha meets the soft coconut-rice classic.",
+      "emoji": "🍵",
+      "available": true
+    },
+    {
+      "id": "chocolate-dodol",
+      "name": "Chocolate Dodol Choux",
+      "category": "Choux · 1 piece",
+      "price": 5.0,
+      "badge": "Signature",
+      "desc": "Dark chocolate choux with a chewy gula Melaka centre.",
+      "emoji": "🍫",
+      "available": true
+    },
+    {
+      "id": "burnt-coconut",
+      "name": "Burnt Coconut Cheesecake",
+      "category": "Cheesecake · 1 piece",
+      "price": 7.5,
+      "badge": "New",
+      "desc": "Caramelised coconut, vanilla cream and a delicate sea-salt finish.",
+      "emoji": "🥥",
+      "available": true
+    },
+    {
+      "id": "dessert-box",
+      "name": "Signature Dessert Box",
+      "category": "Box · 8 pieces",
+      "price": 38.0,
+      "badge": "Gift-ready",
+      "desc": "A curated mix of MELT//LAB signatures in a premium gift box.",
+      "emoji": "🎁",
+      "available": true
+    },
+    {
+      "id": "mini-set",
+      "name": "Mini Celebration Set",
+      "category": "Set · serves 4–6",
+      "price": 68.0,
+      "badge": "Easy pick",
+      "desc": "A compact celebration set for birthdays, office treats and small gatherings.",
+      "emoji": "✨",
+      "available": true
+    }
+  ],
+  "tablePackages": [
+    {
+      "name": "Essential",
+      "price": 18,
+      "desc": "Curated desserts, simple display and labels."
+    },
+    {
+      "name": "Signature",
+      "price": 28,
+      "desc": "Expanded menu, styled display and personalised labels."
+    },
+    {
+      "name": "Lab Experience",
+      "price": 42,
+      "desc": "Premium menu, full styling direction and feature pieces."
+    }
+  ],
+  "reviews": [
+    {
+      "text": "Beautiful, thoughtful and very Malaysian without feeling traditional in the usual way.",
+      "meta": "Brand event · Petaling Jaya"
+    },
+    {
+      "text": "The pandan gula Melaka tart disappeared before we even got to the cake.",
+      "meta": "Private celebration · Selangor"
+    },
+    {
+      "text": "The dessert table looked like it belonged in a magazine — and every flavour still felt familiar.",
+      "meta": "Wedding · Kuala Lumpur"
+    }
+  ]
+}
